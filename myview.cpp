@@ -117,10 +117,8 @@ myView::myView(QWidget *parent)
 
 bool myView::isColliding()
 {
-    foreach(QGraphicsItem *item,snake){
-        if(!paintRect->contains(item->pos()))
-            return true;
-    }
+    if(!paintRect->contains(snake.first()->pos()))
+         return true;
     for (int i=1;i<snake.size()-1;i++)
     {
         if(snake.first()->pos()==snake.at(i)->pos())
