@@ -30,9 +30,3 @@ QPainterPath myBox::shape() const
     return path;
 }
 
-void myBox::setBrushColor()
-{
-    brushColor=Qt::green;
-    update();
-}
-
